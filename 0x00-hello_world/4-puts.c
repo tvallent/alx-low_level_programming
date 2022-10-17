@@ -1,15 +1,11 @@
-#!/bin/bash
 #include <studio.h>
 /*
- * printing using "put" function
- *
+ *main- print aline  usin put
+ *return :0
  */
 int main(void)
 {
-	puts( \n)
-
-
-
-
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 
 }
