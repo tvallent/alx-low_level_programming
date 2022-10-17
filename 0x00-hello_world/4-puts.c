@@ -1,7 +1,7 @@
 #include <studio.h>
 /*
- *main- print aline  usin put
- *return :0
+ * printing using put
+ *
  */
 int main(void)
 {
