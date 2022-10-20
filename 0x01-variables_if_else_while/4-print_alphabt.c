@@ -2,17 +2,20 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * more headers goes there 
- * main -still going on
- * betty style doc for function main goes there 
- */
-int main(void)                                                      
-{	char c;
+* main - entry point
+*Return: 0
+*/
+int main(void)
+{
+	char c;
+
 	c = 'a';
 	while (c <= 'z')
-	{	if((c !=m'e'||c !='q') && c <= 'z')
+	{
+		if ((c != 'e' || c != 'q') && c <= 'z')
 			putchar(c);
-		c++;}
+		c++;
+	}
 	putchar('\n');
 	return (0);
 }
