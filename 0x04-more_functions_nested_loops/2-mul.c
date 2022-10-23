@@ -5,9 +5,7 @@
  * @a: first input
  * @b: second input
  * Return: product of a & b
- * Return: multiplication result of the 2 inputs
  */
-int mul(int a. int b)
 int mul(int a, int b)
 
 {
