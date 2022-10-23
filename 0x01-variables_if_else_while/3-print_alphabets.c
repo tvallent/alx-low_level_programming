@@ -5,8 +5,10 @@
  * Return: Always 0 (Success/correct)
  */
 int main(void)
-{	char c;
+{
+	char c;
 	char d;
+
 	c = 'a';
 	d = 'A';
 
