@@ -7,6 +7,7 @@
  *
  * Return:  Always 0 (Success)
  */
+
 int main(void)
 {
 	int d;
@@ -16,14 +17,11 @@ int main(void)
 	{
 		putchar(d);
 	}
-
-	for (low = 'a'; low <= 'f'; low++);
+	for (low = 'a'; low <= 'f'; low++)
 	{
 		putchar(low);
 	}
-
 	putchar('\n');
-
+	
 	return (0);
-
 }
