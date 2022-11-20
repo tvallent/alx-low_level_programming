@@ -1,3 +1,4 @@
+#!/bin/bash
  - Static libraries
 
 C
