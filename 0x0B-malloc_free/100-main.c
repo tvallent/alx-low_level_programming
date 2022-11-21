@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for ALX School students.
- *@ac: int input
- *@av: double pointer array
- * Return: Always 0.
+ *print_tab - Prints an array of string
+ *@tab: The array to print
+ *
+ * Return: 0.
  */
 int main(int ac, char *av[])
 {

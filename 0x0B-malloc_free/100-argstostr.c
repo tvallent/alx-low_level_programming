@@ -1,24 +1,41 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * main - check the code for ALX School students.
  * argstostr - main entry
  * @ac: int input
  * @av: double pointer array
- * Return: Always 0.
+ * Return: 0
  */
-int main(int ac, char *av[])
+char *argstostr(int ac, char **av)
 {
-	char *s;
+	int i, n, r = 0, l = 0;
+	char *str;
 
-	s = argstostr(ac, av);
-	if (s == NULL)
+	if (ac == 0 || av == NULL)
+		return (NULL);
+
+	for (i = 0; i < ac; i++)
 	{
-		return (1);
+	for (n = 0; av[i][n]; n++)
+		l++;
 	}
-	printf("%s", s);
-	free(s);
-	return (0);
+	l += ac;
+
+	str = malloc(sizeof(char) * l + 1);
+	if (str == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
+	{
+	for (n = 0; av[i][n]; n++)
+	{
+		str[r] = av[i][n];
+		r++;
+	}
+	if (str[r] == '\0')
+	{
+		str[r++] = '\n';
+	}
+	}
+	return (str);
 }
