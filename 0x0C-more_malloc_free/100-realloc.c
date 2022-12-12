@@ -1,66 +1,37 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * _realloc - function that reallocates a memory block using malloc and free
- * @ptr: pointer to the old array
- * @old_size: size of the memory space to allocate in bytes
- * @new_size: size of type
- * Return: void pointer
- */
-
+  * _realloc - ...
+  * @ptr: ...
+  * @old_size: ...
+  * @new_size: ...
+  *
+  * Return: ...
+  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *newptr;
-
-	if (ptr == NULL)
-
-	{
-
-		newptr = malloc(new_size);
-
-		if (newptr == NULL)
-
-		{
-
-			free(ptr);
-
-			return (NULL);
-
-		}
-
-		free(ptr);
-
-		return (newptr);
-
-	}
-
-	if (old_size == 0)
-
-		return (NULL);
+	char *nptr;
+	unsigned int i;
 
 	if (new_size == old_size)
-
 		return (ptr);
 
-	if (new_size == 0 && ptr != NULL)
-
+	if (ptr == NULL)
 	{
+		nptr = malloc(new_size);
 
-		free(ptr);
+		if (nptr == NULL)
 
-		return (NULL);
+			return (NULL);
 
+		return (nptr);
 	}
-
-	if (new_size > old_size)
-
+	else
 	{
 
-		newptr = malloc(new_size);
-
-		if (newptr == NULL)
+		if (new_size == 0)
 
 		{
 
@@ -70,12 +41,18 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 		}
 
-		_memcpy(newptr, ptr, old_size);
-
-		free(ptr);
-
 	}
 
-	return (newptr);
+	nptr = malloc(new_size);
 
+	if (nptr == NULL)
+		return (NULL);
+
+	for (i = 0; i < old_size && i < new_size; i++)
+	{
+		nptr[i] = ((char *) ptr)[i];
+	}
+
+	free(ptr);
+	return (nptr);
 }
