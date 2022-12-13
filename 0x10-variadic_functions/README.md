@@ -1,0 +1,1 @@
+Variadic functions are functions that take a variable number of arguments. The dynamic query engine supports variadic functions. Consider the following data descriptor file snippet that describes a scalar function that takes a variable number of integer arguments.
